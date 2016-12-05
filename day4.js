@@ -40,11 +40,11 @@ lines.forEach(function(e) {
 	    	return b[1] - a [1];
 	    }
 	    return a[0].charCodeAt(0) - b[0].charCodeAt(0);			
-	})
+	});
 	
 	var flag = true;
 
-	for(var i=0; i < code.length; i++){
+	for( i=0; i < code.length; i++){
 		if(sortable[i][0] != code.charAt(i)){
 			flag = false;
 		}
@@ -54,7 +54,7 @@ lines.forEach(function(e) {
 		real.push(e);
 		res += parseInt(num);
 	}
-})
+});
 
 //PART 2
 
@@ -83,4 +83,4 @@ real.forEach(function(e) {
 		console.log("Enc : "+ str);
 		console.log("Dec : "+ stg);
 	}
-})
+});

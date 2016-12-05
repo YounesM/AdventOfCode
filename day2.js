@@ -4,6 +4,13 @@
  */
 
 process.stdin.on('data', function (input) {
+    // PART 1 Grid
+    // var grid = [
+    //     [1,2,3],
+    //     [4,5,6],
+    //     [7,8,9]
+    // ];
+    // PART 2 Grid
     var grid = [
         ["x","x","1","x","x"],
         ["x","2","3","4","x"],
