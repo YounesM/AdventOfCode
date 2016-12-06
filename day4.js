@@ -1,6 +1,6 @@
 /*
 	Day 4: Security Through Obscurity
-	Status : SUCCEEDED
+	Status : DONE
 */
 
 var fs = require("fs");

@@ -1,6 +1,6 @@
 /*
     Day 2: Bathroom Security
-    Status : SUCCEEDED
+    Status : DONE
  */
 
 process.stdin.on('data', function (input) {

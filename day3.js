@@ -1,6 +1,6 @@
 /*
     Day 3: Squares With Three Sides
-    Status : SUCCEEDED
+    Status : DONE
  */
 
 //PART 1

@@ -1,6 +1,6 @@
 /*
 	Day 6: Signals and Noise
-	Status : SOLIVING (1/2)
+	Status : DONE
 */
 
 const fs = require("fs");
@@ -26,7 +26,11 @@ for(var i=0; i < 8; i++){
 	}
 
 	sortable.sort(function(a,b) {
-		return b[1] - a[1];		
+		// PART 1
+		// return b[1] - a[1];
+		
+		// PART 2
+		return a[1] - b[1];		
 	})
 	ans += sortable[0][0];
 	alpha = [];

@@ -1,6 +1,6 @@
 /*
      Day 5: How About a Nice Game of Chess?
-     Status: SUCCEEDED
+     Status: DONE
  */
 
 // PART 1
