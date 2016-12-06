@@ -8,47 +8,94 @@ const input = (fs.readFileSync('input/day1','utf8')).split(", ");
 
 var coords = [0,0];
 var direction = '↑';
+var locations = [];
 
 // PART 1
 input.forEach(function (e) {
+    var a;
     if (e.charAt(0) == "R"){
         switch (direction){
             case '↑':
                 direction = '→';
-                coords[0] += parseInt(e.replace(/R|L/g, ""));
+                for(var i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[0]++;
+                    a = coords.slice();
+                    locations.push(a);
+                    
+                }
                 break;
             case '→':
                 direction = '↓';
-                coords[1] -= parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[1]--;
+                    a = coords.slice();
+                    locations.push(a);
+                    
+                }
                 break;
             case '↓':
                 direction = '←';
-                coords[0] -= parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[0]--;
+                    a = coords.slice();
+                    locations.push(a);
+                }
                 break;
             case '←':
                 direction = '↑';
-                coords[1] += parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[1]++;
+                    a = coords.slice();
+                    locations.push(a);
+                }
                 break;
         }
     } else {
         switch (direction){
             case '↑':
                 direction = '←';
-                coords[0] -= parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[0]--;
+                    a = coords.slice();
+                    locations.push(a);
+                }
                 break;
             case '→':
                 direction = '↑';
-                coords[1] += parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[1]++;
+                    a = coords.slice();
+                    locations.push(a);
+                }
                 break;
             case '↓':
                 direction = '→';
-                coords[0] += parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[0]++;
+                    a = coords.slice();
+                    locations.push(a);
+                }
                 break;
             case '←':
                 direction = '↓';
-                coords[1] -= parseInt(e.replace(/R|L/g, ""));
+                for(i=0;i<parseInt(e.replace(/R|L/g, ""));i++){
+                    coords[1]--;
+                    a = coords.slice();
+                    locations.push(a);
+                }
                 break;
         }
     }
 });
 console.log("Answer is : "+ (coords[0]+coords[1]));
+console.log("First location visited twice is at : "+ doubleLocation(locations));
+
+function doubleLocation(array) {
+    for(var i=0; i < array.length; i++){
+        for(var j=0; j < array.length; j++){
+            if(array[i][0]==array[j][0] && array[i][1]==array[j][1] && i!=j){
+                return array[i][0] + array[i][1];
+            }
+        }
+    }
+}
