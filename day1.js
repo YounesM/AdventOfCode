@@ -1,55 +1,54 @@
 /*
     Day 1 : No Time for a Taxicab
-    Status : FAILED
+    Status : DONE (1/2)
  */
 
-process.stdin.on('data', function (input) {
-    var coords = [0,0];
-    var axis = true;
-    var direction = true;
-    var previous = "";
-    var lines = input.split(",");
+const fs = require("fs");
+const input = (fs.readFileSync('input/day1','utf8')).split(", ");
 
-    lines.forEach(function(e){
-        var str = e.replace(" ","");
-        if(str.charAt(0) === "R"){
-            str = str.replace("R","");
-            axis = !axis;
-            if(previous == "R"){
-                direction = !direction;
-            }
-            if(direction && axis){
-                coords[1] -= parseInt(str);
-            }
-            if(direction && !axis){
-                coords[0] += parseInt(str);
-            }
-            if(!direction && !axis){
-                coords[0] -= parseInt(str);
-            }
-            if(!direction && axis){
-                coords[1] += parseInt(str);
-            }
-        } else {
-            str = str.replace("L","");
-            axis = !axis;
-            if(previous == "L"){
-                direction = !direction;
-            }
-            if(direction && axis){
-                coords[1] += parseInt(str);
-            }
-            if(direction && !axis){
-                coords[0] -= parseInt(str);
-            }
-            if(!direction && !axis){
-                coords[0] += parseInt(str);
-            }
-            if(!direction && axis){
-                coords[1] -= parseInt(str);
-            }
+var coords = [0,0];
+var direction = '↑';
+
+// PART 1
+input.forEach(function (e) {
+    if (e.charAt(0) == "R"){
+        switch (direction){
+            case '↑':
+                direction = '→';
+                coords[0] += parseInt(e.replace(/R|L/g, ""));
+                break;
+            case '→':
+                direction = '↓';
+                coords[1] -= parseInt(e.replace(/R|L/g, ""));
+                break;
+            case '↓':
+                direction = '←';
+                coords[0] -= parseInt(e.replace(/R|L/g, ""));
+                break;
+            case '←':
+                direction = '↑';
+                coords[1] += parseInt(e.replace(/R|L/g, ""));
+                break;
         }
-    });
-    console.log(coords);
-    console.log(83+166)
+    } else {
+        switch (direction){
+            case '↑':
+                direction = '←';
+                coords[0] -= parseInt(e.replace(/R|L/g, ""));
+                break;
+            case '→':
+                direction = '↑';
+                coords[1] += parseInt(e.replace(/R|L/g, ""));
+                break;
+            case '↓':
+                direction = '→';
+                coords[0] += parseInt(e.replace(/R|L/g, ""));
+                break;
+            case '←':
+                direction = '↓';
+                coords[1] -= parseInt(e.replace(/R|L/g, ""));
+                break;
+        }
+    }
 });
+console.log("Answer is : "+ (coords[0]+coords[1]));
