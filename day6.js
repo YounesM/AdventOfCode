@@ -10,7 +10,6 @@ const lines = input.split('\n');
 var alpha = [];
 var ans = "";
 
-// PART 1
 for(var i=0; i < 8; i++){
 	lines.forEach(function(e) {
 		if(alpha[e.charAt(i)]){
@@ -18,7 +17,7 @@ for(var i=0; i < 8; i++){
 		} else {
 			alpha[e.charAt(i)] = 1;
 		}
-	})
+	});
 	
 	var sortable = [];
 	for(var char in alpha){
@@ -31,7 +30,7 @@ for(var i=0; i < 8; i++){
 		
 		// PART 2
 		return a[1] - b[1];		
-	})
+	});
 	ans += sortable[0][0];
 	alpha = [];
 }

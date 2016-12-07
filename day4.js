@@ -55,6 +55,7 @@ lines.forEach(function(e) {
 		res += parseInt(num);
 	}
 });
+console.log("Sum of real messages' IDs : "+ res);
 
 //PART 2
 
