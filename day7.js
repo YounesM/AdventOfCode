@@ -58,6 +58,7 @@ function hasBAB(line, aba){
         aba.forEach(e =>{
             bab.forEach(el =>{
                 if(e[0]==el[1]&&e[1]==el[0]){
+                    console.log(e+" | "+el);
                     flag = true;
                 }
             })
