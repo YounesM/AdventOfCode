@@ -1,4 +1,4 @@
-// --- Day 1: Inverse Captcha (1/2)---
+// --- Day 2: Corruption Checksum (1/2)---
 //
 
 const fs = require('fs');
