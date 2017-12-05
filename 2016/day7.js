@@ -1,5 +1,5 @@
 const fs = require("fs");
-const input = fs.readFileSync('input/day7','utf8').split('\n');
+const input = fs.readFileSync('input/2016/day7','utf8').split('\n');
 let tls = 0;
 let ssl = 0;
 

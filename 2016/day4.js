@@ -4,7 +4,7 @@
 */
 
 var fs = require("fs");
-var input = fs.readFileSync("input/day4", "utf8");
+var input = fs.readFileSync("input/2016/day4", "utf8");
 
 var lines = input.split("\n");
 var res = 0;

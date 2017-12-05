@@ -1,5 +1,5 @@
 const fs = require("fs");
-let input = fs.readFileSync('input/day9','utf8');
+let input = fs.readFileSync('input/2016/day9','utf8');
 
 let ans = 0;
 let match = input;

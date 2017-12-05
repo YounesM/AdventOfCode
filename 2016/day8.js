@@ -1,5 +1,5 @@
 const fs = require("fs");
-const input = fs.readFileSync('input/day8','utf8').split('\n');
+const input = fs.readFileSync('input/2016/day8','utf8').split('\n');
 
 class TinyLCD {
     constructor(cols, rows) {

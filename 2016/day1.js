@@ -4,7 +4,7 @@
  */
 
 const fs = require("fs");
-const input = (fs.readFileSync('input/day1','utf8')).split(", ");
+const input = (fs.readFileSync('input/2016/day1','utf8')).split(", ");
 
 var coords = [0,0];
 var direction = '↑';

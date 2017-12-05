@@ -4,7 +4,7 @@
 */
 
 const fs = require("fs");
-const input = fs.readFileSync('input/day6','utf8');
+const input = fs.readFileSync('input/2016/day6','utf8');
 
 const lines = input.split('\n');
 var alpha = [];
