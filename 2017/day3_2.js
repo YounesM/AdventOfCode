@@ -9,11 +9,12 @@ class SquareBuilder {
         this.y = (square_size - 1) / 2;
         this.memory[this.x][this.y] = 1;
         this.step = 0;
+        this.previousStep = 0;
         this.input = input;
     }
 
     goLeft(input) {
-        let maxVar = this.y - this.step;
+        let maxVar = this.y - this.previousStep - this.step;
         while (this.y > maxVar-1 && this.memory[this.x][this.y] < input) {
             this.y--;
             this.memory[this.x][this.y] = this.getValue();
@@ -25,11 +26,27 @@ class SquareBuilder {
         }
     }
 
-    goRight(input) {
-        let maxVar = this.y + this.step;
+    go(input) {
+        let maxVar = this.y + this.previousStep + this.step;
         while (this.y <= maxVar && this.memory[this.x][this.y] < input) {
             if (this.y === maxVar) {
-                this.step++;
+                this.previousStep = this.step++;
+            }
+            this.y++;
+            this.memory[this.x][this.y] = this.getValue();
+        }
+        if (this.memory[this.x][this.y] < input) {
+            this.goTop(input);
+        } else {
+            console.log(this.memory[this.x][this.y])
+        }
+    }
+
+    goRight(input) {
+        let maxVar = this.y + this.previousStep + this.step;
+        while (this.y <= maxVar + 1 && this.memory[this.x][this.y] < input) {
+            if (this.y === maxVar) {
+                this.previousStep = this.step++;
             }
             this.y++;
             this.memory[this.x][this.y] = this.getValue();
@@ -42,7 +59,7 @@ class SquareBuilder {
     }
 
     goTop(input) {
-        let maxVar = this.x - this.step;
+        let maxVar = this.x - this.previousStep - this.step;
         while (this.x > maxVar && this.memory[this.x][this.y] < input) {
             this.x--;
             this.memory[this.x][this.y] = this.getValue();
@@ -55,7 +72,7 @@ class SquareBuilder {
     }
 
     goBottom(input) {
-        let maxVar = this.x + this.step;
+        let maxVar = this.x + this.previousStep + this.step;
         while (this.x < maxVar+1 && this.memory[this.x][this.y] < input) {
             this.x++;
             this.memory[this.x][this.y] = this.getValue();
@@ -74,4 +91,4 @@ class SquareBuilder {
     }
 }
 let builder = new SquareBuilder(input);
-builder.goRight(input);
+builder.go(input);
