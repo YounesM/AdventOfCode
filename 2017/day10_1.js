@@ -1,10 +1,21 @@
-// --- Day 9: Stream Processing ---
+// --- Day 10: Knot Hash (Part 1) ---
 const fs = require('fs');
-// let input = fs.readFileSync('input/2017/day10', 'utf8').split(','),
-let input = "3,4,2,5,1".split(','),
-    list = new Array(6).fill(0).map((e, i) => (i)), step = 0;
-for (let i = 0, c = list[0]; i < input.length; i++, c = list[(+input[i] + step++)%list.length-1]) {
-    let subArray = new Array(+input[i]).fill(0).map((e, i) => (list[(c + i) % list.length])).reverse();
-    list = list.map((e, i) => ((list.length + i - list.indexOf(c))%list.length < subArray.length ? subArray[(list.length + i - list.indexOf(c))%list.length]: e));
+let input = fs.readFileSync('input/2017/day10', 'utf8').split(','),
+    list = new Array(256).fill(0).map((e, i) => (i)), skip = 0, currentPos = 0;
+input.forEach(el => {
+    reverseOrder(list, el, currentPos);
+    currentPos = (currentPos + (+el + skip))%(list.length);
+    skip++;
+});
+function reverseOrder(array, length, start) {
+    let cpt = 0, i = start, j = (length -1 + i) % (array.length);
+    while (cpt < Math.floor(length / 2)) {
+        let c = array[i];
+        array[i] = array[j];
+        array[j] = c;
+        i = ++i % array.length;
+        j = (--j % array.length + array.length) %  array.length;
+        cpt++;
+    }
 }
 console.log('PART 1: ' + list[0] * list[1]);
