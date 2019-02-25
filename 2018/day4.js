@@ -48,5 +48,14 @@ guardSleepList.forEach(list => {
     maxSleepId = list.id;
   }
 })
+console.log('Part 1 : '+maxSleepIndex * maxSleepId);
 
-console.log(maxSleepIndex * maxSleepId);
+maxSleep = 0, maxSleepId = 0, maxSleepIndex = 0;
+guardSleepList.forEach(list => {
+  if(maxSleep <= Math.max(...list.minutesAsleep)) {
+    maxSleep =  Math.max(...list.minutesAsleep);
+    maxSleepIndex = list.minutesAsleep.indexOf(maxSleep);
+    maxSleepId = list.id;
+  }
+})
+console.log('Part 2 : '+maxSleepIndex * maxSleepId);
