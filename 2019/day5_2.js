@@ -1,4 +1,4 @@
-// --- Day 5: Sunny with a Chance of Asteroids --- (PART 2)
+// --- Day 5: Sunny with a Chance of Asteroids --- (PART 1)
 const fs = require('fs');
 let i = fs.readFileSync('../input/2019/day5', 'utf8').split(','), j = 0, input = 5;
 while (i[j] !== 99) {

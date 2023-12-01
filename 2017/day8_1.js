@@ -1,4 +1,4 @@
-// --- Day 8: I Heard You Like Registers (1/2)---
+// --- Day 8: I Heard You Like Registers (1/1)---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day8', 'utf8').split('\r\n'), reg = [];
 input.forEach(inst => {

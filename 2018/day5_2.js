@@ -1,4 +1,4 @@
-//day 5 part 2
+//day 5 part 1
 const fs = require('fs');
 let polymers = fs.readFileSync('../input/2018/day5', 'utf8'),
 minLength = polymers.length;

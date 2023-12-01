@@ -1,4 +1,4 @@
-// --- Day 8: Handheld Halting --- (PART 2)
+// --- Day 8: Handheld Halting --- (PART 1)
 const fs = require('fs');
 let input = fs.readFileSync('../input/2020/day8', 'utf8').trim().split('\r\n');
 let acc = 0, currentInstruction = 0;

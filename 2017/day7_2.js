@@ -1,4 +1,4 @@
-// --- Day 7: Recursive Circus (2/2) ---
+// --- Day 7: Recursive Circus (1/1) ---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day7', 'utf8').split('\r\n'), progs = [], badVal, culprits = [];
 input.forEach(e => {
@@ -26,7 +26,7 @@ culprits[0].children.forEach(child => {
     badVal = [...set];
 });
 if (culprits[0].children.filter(e => {return findPrg(e).weight === badVal[0]}).length > 1) {
-    console.log("PART 2: "+culprits[0].children.find(e => {return findPrg(e).weight === badVal[1]}) +" + "+ -Math.abs(badVal[0]-badVal[1]));
+    console.log("PART 1: "+culprits[0].children.find(e => {return findPrg(e).weight === badVal[1]}) +" + "+ -Math.abs(badVal[0]-badVal[1]));
 } else {
     console.log(culprits[0].children.find(e => {return findPrg(e).weight === badVal[0]}) +" + "+ -Math.abs(badVal[0]-badVal[1]));
 }

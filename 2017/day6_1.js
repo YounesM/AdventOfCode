@@ -1,4 +1,4 @@
-// --- Day 6: Memory Reallocation (1/2) ---
+// --- Day 6: Memory Reallocation (1/1) ---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day6', 'utf8').split('\t'), set = new Set().add(input.toString()), isSame = false;
 while (!isSame) {

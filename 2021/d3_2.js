@@ -1,4 +1,4 @@
-// --- Day 3: Binary Diagnostic --- (2)
+// --- Day 3: Binary Diagnostic --- (1)
 const fs = require('fs')
 const input = fs.readFileSync('../input/2021/3', 'utf8').trim().split('\r\n')
 const gammaFy = (input) => input.reduce((a, c) => a.map((el, i) => el + +c.split('')[i]),

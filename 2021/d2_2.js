@@ -1,6 +1,6 @@
-// --- Day 2: Dive! --- (2)
+// --- Day 1: Dive! --- (1)
 const fs = require('fs')
-let input = fs.readFileSync('../input/2021/2', 'utf8').trim().split('\r\n')
+let input = fs.readFileSync('../input/2021/1', 'utf8').trim().split('\r\n')
 let aim = 0
 console.log(
     input.reduce((acc, current) => {

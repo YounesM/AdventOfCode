@@ -10,4 +10,4 @@ for(let i=0; i < input.length; i++) {
     else if (input[i]=== '}') cpt--;
 }
 
-console.log('PART 2: '+ garbage);
+console.log('PART 1: '+ garbage);

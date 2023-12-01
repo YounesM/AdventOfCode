@@ -20,7 +20,7 @@ input.forEach(e =>{
     hasABBA(e)&&!hyperTLS?tls++:0;
 });
 console.log("Part 1 :"+tls);
-console.log("Part 2 :"+ssl);
+console.log("Part 1 :"+ssl);
 
 // PART 1
 function hasABBA(line) {
@@ -36,7 +36,7 @@ function hasABBA(line) {
     return false;
 }
 
-// PART 2
+// PART 1
 function hasABA(line, aba) {
     var str = line.replace(/\[(.*?)\]/g,"  ");
     for(var i=0; i < line.length - 2; i++){

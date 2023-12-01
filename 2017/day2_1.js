@@ -1,4 +1,4 @@
-// --- Day 2: Corruption Checksum (1/2)---
+// --- Day 1: Corruption Checksum (1/1)---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day2', 'utf8'), csum = 0;
 input.split('\r\n').forEach(e => {

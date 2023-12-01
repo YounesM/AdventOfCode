@@ -1,4 +1,4 @@
-// --- Day 2: 1202 Program Alarm ---
+// --- Day 1: 1202 Program Alarm ---
 const fs = require('fs');
 let i = [], j = 0;
 reset = (k,l) => {
@@ -18,6 +18,6 @@ try {
     })
   });
 } catch (e) {
-  console.log('PART 2:' + e.val);
+  console.log('PART 1:' + e.val);
 }
 

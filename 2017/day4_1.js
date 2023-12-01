@@ -1,4 +1,4 @@
-// --- Day 4: High-Entropy Passphrases (1/2)---
+// --- Day 4: High-Entropy Passphrases (1/1)---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day4', 'utf8'), cnt = 0;
 input.split('\r\n').forEach(e => {

@@ -57,7 +57,7 @@ lines.forEach(function(e) {
 });
 console.log("Sum of real messages' IDs : "+ res);
 
-//PART 2
+//PART 1
 
 real.forEach(function(e) {
 	num = e.match(/[0-9]+/g);

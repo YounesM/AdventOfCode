@@ -9,4 +9,4 @@ for (let i = minRange; i <= maxRange; i++) {
   }
 }
 
-console.log('PART 2:'+ passwordList.length);
+console.log('PART 1:'+ passwordList.length);

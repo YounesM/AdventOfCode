@@ -1,4 +1,4 @@
-// --- Day 7: Recursive Circus (1/2) ---
+// --- Day 7: Recursive Circus (1/1) ---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day7', 'utf8').split('\r\n'), holding = [], held = [];
 input.forEach(e => {

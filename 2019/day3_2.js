@@ -23,7 +23,7 @@ intersect.forEach(coord => {
     min = min ? Math.min(steps2 + steps1, min) : steps1 + steps2;
 });
 
-console.log('PART 2:'+ min);
+console.log('PART 1:'+ min);
 
 function moveTo(coord, direction, length, array) {
   let x = coord.split(',')[0], y = coord.split(',')[1];

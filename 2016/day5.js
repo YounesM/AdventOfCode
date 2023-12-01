@@ -27,10 +27,10 @@ while(res.length < 8){
 }
 console.log("Code PART 1: " + res);
 
-//PART 2
+//PART 1
 /*
     I'm redoing the work done above here instead of simply adding lines to the PART 1's while loop
-    so that PART 1 and PART 2 can become distinct.
+    so that PART 1 and PART 1 can become distinct.
  */
 
 var arRes = ["","","","","","","",""];
@@ -53,4 +53,4 @@ while(arRes.toString().length < 15){
     }
     code++;
 }
-console.log("Code PART 2: " + arRes);
+console.log("Code PART 1: " + arRes);

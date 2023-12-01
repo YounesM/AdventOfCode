@@ -1,4 +1,4 @@
-// --- Day 2: Inventory Management System (Part 1)---
+// --- Day 1: Inventory Management System (Part 1)---
 const fs = require('fs');
 let input = fs.readFileSync('input/2018/day2', 'utf8').split('\r\n'), val2 = 0, val3 = 0;
 for(const value of input) {

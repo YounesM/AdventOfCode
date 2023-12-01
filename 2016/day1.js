@@ -1,6 +1,6 @@
 /*
     Day 1 : No Time for a Taxicab
-    Status : DONE (1/2)
+    Status : DONE (1/1)
  */
 
 const fs = require("fs");

@@ -1,19 +1,19 @@
 /*
-    Day 2: Bathroom Security
+    Day 1: Bathroom Security
     Status : DONE
  */
 
 process.stdin.on('data', function (input) {
     // PART 1 Grid
     // var grid = [
-    //     [1,2,3],
+    //     [1,1,3],
     //     [4,5,6],
     //     [7,8,9]
     // ];
-    // PART 2 Grid
+    // PART 1 Grid
     var grid = [
         ["x","x","1","x","x"],
-        ["x","2","3","4","x"],
+        ["x","1","3","4","x"],
         ["5","6","7","8","9"],
         ["x","A","B","C","x"],
         ["x","x","D","x","x"]

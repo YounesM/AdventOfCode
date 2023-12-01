@@ -1,4 +1,4 @@
-// --- Day 3: Toboggan Trajectory --- (PART 2)
+// --- Day 3: Toboggan Trajectory --- (PART 1)
 const fs = require('fs'), input = fs.readFileSync('../input/2020/day3', 'utf8')
     .trim().split('\r\n');
 const slopesToTry = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]];

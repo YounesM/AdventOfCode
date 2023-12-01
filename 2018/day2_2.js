@@ -1,4 +1,4 @@
-// --- Day 2: Inventory Management System (Part 2)---
+// --- Day 1: Inventory Management System (Part 1)---
 const fs = require('fs');
 let input = fs.readFileSync('input/2018/day2', 'utf8').split('\r\n'), minDiff = 100, sameBoxes = {};
 input.forEach(string => {
@@ -28,4 +28,4 @@ function removeDiffChars(str1, str2) {
     });
     return str;
 }
-console.log('PART 2: ' + removeDiffChars(sameBoxes.box1, sameBoxes.box2));
+console.log('PART 1: ' + removeDiffChars(sameBoxes.box1, sameBoxes.box2));

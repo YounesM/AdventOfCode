@@ -1,4 +1,4 @@
-// --- Day 7: Handy Haversacks --- (PART 2)
+// --- Day 7: Handy Haversacks --- (PART 1)
 // This is slow AF because of the 3 loops, you probably can do better with recursive functions
 // or some Array.reduce() shenanigans but I'm lazy.
 // Might change this one day if I'm harassed or my life is threatened

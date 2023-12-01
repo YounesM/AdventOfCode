@@ -28,7 +28,7 @@ for(var i=0; i < 8; i++){
 		// PART 1
 		// return b[1] - a[1];
 		
-		// PART 2
+		// PART 1
 		return a[1] - b[1];		
 	});
 	ans += sortable[0][0];

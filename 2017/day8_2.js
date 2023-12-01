@@ -16,4 +16,4 @@ input.forEach(line => {
         max = Math.max.apply(Math,[register[line.split('if')[0].split(' ')[0]],max])
     }
 });
-console.log('PART 2: '+ max);
+console.log('PART 1: '+ max);

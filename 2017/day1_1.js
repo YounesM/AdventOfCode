@@ -1,4 +1,4 @@
-// --- Day 1: Inverse Captcha (1/2)---
+// --- Day 1: Inverse Captcha (1/1)---
 const fs = require('fs');
 let input = fs.readFileSync('input/2017/day1', 'utf8'), sum = 0;
 for (let i = 0; i < input.split('').length; i++) {

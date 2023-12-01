@@ -17,7 +17,7 @@ process.stdin.on('data', function (input) {
     console.log(res);
 });
 
-//PART 2
+//PART 1
 process.stdin.on('data', function (input) {
     var res = 0;
     var lines = input.split('\n');
